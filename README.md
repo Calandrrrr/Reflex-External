@@ -4,6 +4,10 @@ Reflex is a memory-reading assist overlay. This repository holds **only release 
 
 ---
 
+## Ethics
+
+ok one thing to get established is that this is of course not to be used for cheating and is only a example of how cheaters could cheat 👍
+
 ## About this project — and about AI
 
 This project is what it is largely because of AI. Most of the code you're running was written, debugged, and rewritten with heavy AI assistance over a very short span of days. I won't pretend otherwise.
