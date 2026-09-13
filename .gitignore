@@ -1,0 +1,4 @@
+# Release-only repository. Keep source, local builds, and secrets out.
+*
+!.gitignore
+!README.md
