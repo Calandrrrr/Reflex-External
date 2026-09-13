@@ -1,38 +1,57 @@
-# Reflex External
+# Reflex
 
-Reflex is a Windows technology demonstration showing how external software can inspect a running application's state and automate input. It is provided for controlled research and educational testing. It is not intended to provide an unfair advantage in online games.
+Reflex is a memory-reading assist overlay. This repository holds **only release files** — the actual source is not public and will not be.
 
-## Important Notice
+---
 
-- Using software that reads or changes another process can violate that application's terms and may result in account restrictions or bans.
-- Reflex is not guaranteed to be undetected. Detection behavior can change at any time. However as of 2026/09/13 it is completely undetected and will not get you banned, do keep in mind that this can always change
-- Antivirus and SmartScreen products may flag Reflex because it is currently unsigned and uses process inspection, memory access, and input automation.
-- Do not disable security protections for software you do not trust. Verify that downloads come from this repository and compare the published SHA-256 hash.
-- You are responsible for how you use this software. The authors are not liable for account action, data loss, or other damage.
+## About this project — and about AI
 
-## Install
+This project is what it is largely because of AI. Most of the code you're running was written, debugged, and rewritten with heavy AI assistance over a very short span of days. I won't pretend otherwise.
 
-1. Open the latest release on this repository.
-2. Download `reflex-1.1.0.exe` and `update.manifest.signed`.
-3. Verify the installer SHA-256 against the signed manifest or release notes.
-4. Run the installer and select **Install**.
-5. Reflex installs to `%LOCALAPPDATA%\Reflex` without administrator access.
+But I want to be clear about where I stand, because it matters:
 
-6. (Optional) Go to Windows Security > Virus & Threat protection > Manage Settings > Add or Remove Exclusions and whitelist both the installer (wherever you put it, recommended to take out of downloads though) and the actual folder for Reflex itself at %appdata%\local\Reflex (Windows + R the type %appdata% and hit enter)
+**I don't like AI for what it is today.** I don't like what it's doing to programming as a whole, to the people whose jobs it's eating, or to the culture of pasting prompts and shipping broken nonsense under a name you can't be proud of. And yet, just because I dislike it doesn't mean it's not developing, and it doesn't mean I'm going to pretend it isn't actively speeding up workflows right now, on this project. It is. Denying that would be stupider than any shitty AI Slop.
 
-The installer also provides **Launch** and **Uninstall** controls.
+**I also don't support vibe coders.** I have open contempt for people who generate code they cannot read, cannot debug, and cannot take responsibility for. That said, I understand the usage. I understand why people do it, the pace, the ease, or how cheap it can be and that's formed around the last few years of AI development. Understanding it doesn't mean I respect it.
 
-## Current Release
+There's a line between using AI as a tool and surrendering to it. This project does attempt to stay on the right side of that line. Read the code. Question the output. Ship what you know will work.
 
-Version: `1.1.0`
+---
 
-Installer SHA-256:
+## Detection status
 
-```text
-bdbc1eedc17be7db733d60a486f59c746cb89b23d86fb7a8508027351747074e
-```
+Reflex reads game memory and is **not detected as of this release**. That status is a snapshot, not a promise.
 
-This public repository contains release artifacts and documentation only. Product source and private signing material are not published here. Reflex for now and for the presumed future will stay closed-source and paid unless it is deemed that it should be made open-source and free.
+Detection is not permanent for anything in this category. Every game update, every anti-cheat patch, every antivirus signature update can flip it. The intent is for it to stay undetected, and so far it has — but if you need a guarantee, this category has none to sell. Expect the status to possibly change, and check back for a new release when that day comes.
 
+---
 
-AI was utilized in making this but Reflex is not vibe-coded slop, Reflex will never be as we value actual effort, and was made with genuine care and was thoroughly rewritten multiple times in order to get
+## How to download — and keep it from getting deleted
+
+Anti-virus and SmartScreen will treat Reflex like malware, because to them, it is: a native binary that reads another process's memory. A memory-reading overlay looks exactly like a cheat to an AV engine, because that's literally what it is.
+
+**Important:** if you click the download link in a normal browser with real-time protection running, the file will be flagged and **deleted automatically** before you ever see it. That is normal and expected, not a broken download. Real-time protection is exactly what deletes it, so that's what you turn off first.
+
+To actually get it:
+
+1. **Turn off real-time protection temporarily**, so the file is allowed to download:
+   - Windows Security → Virus & threat protection → **Manage settings** → turn off **Real-time protection** (toggle it off).
+2. **Download the installer asset** from the Releases tab of this repository (the `reflex-*.exe` file). With real-time protection off, the download survives.
+3. **Add an exclusion** so Windows leaves the file alone after you re-enable protection:
+   - Windows Security → Virus & threat protection → **Manage settings** → **Exclusions** → **Add exclusion** → **Folder**
+   - Point it at your **Downloads** folder (or wherever the installer is saved). If the file vanished anyway, check **Protection history → Restore** first, then add the exclusion.
+4. **Turn real-time protection back on** — immediately. Downloads folder is covered, nothing to protect against.
+5. Run the installer (if SmartScreen says *"Windows protected your PC"* → **More info → Run anyway**).
+6. Add an exclusion for the install folder too: `%LOCALAPPDATA%\Reflex`.
+
+The file is intentionally small; detection comes from AV heuristics seeing "small native exe that reads memory," not from anything hidden in the installer.
+
+---
+
+## Source / support
+
+Source is closed and stays closed unless I deem that it should be open-source and free, and for support you can either reach out to me or get support in any future/current server or channel I have for this project.
+
+if u are genuinely competent in reverse engineering then ill say this, please don't reverse this. reversing what ive made would be rlly annoying for both me and you, and i promise the amount of effort you will have to put in to at most get pseudo-code isnt worth it.
+
+if you wanna go reverse smth go reverse a bigger project than mine (🌊, ⚡, etc) 👀
