@@ -1,6 +1,6 @@
 # Reflex
 
-Reflex is a memory-reading assist overlay. This repository holds **only release files** — the actual source is not public and will not be.
+Reflex is a memory-reading assist overlay. This repository holds **only release files**, the actual source is not public and will not be.
 
 ---
 
